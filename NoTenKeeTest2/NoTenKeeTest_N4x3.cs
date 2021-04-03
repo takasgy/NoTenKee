@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NoTenKee;
 
-namespace NoTenKeeTest
+namespace NoTenKeeTest2
 {
     /// <summary>
     /// 帳票形式:リスト型(縦方向4行　横方向3行)

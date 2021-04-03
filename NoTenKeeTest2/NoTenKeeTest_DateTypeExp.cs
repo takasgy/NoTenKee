@@ -3,7 +3,7 @@ using NoTenKee;
 using NoTenKee.AppException;
 using System;
 
-namespace NoTenKeeTest
+namespace NoTenKeeTest2
 {
     /// <summary>
     /// 帳票形式:リスト型(縦方向1行　横方向1行)

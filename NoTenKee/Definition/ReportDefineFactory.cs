@@ -18,7 +18,7 @@ namespace NoTenKee.Definition
                 return reader.DoRead(refDefPath);
             } else
             {
-                throw new FileNotFoundException("XML File not found!");
+                throw new FileNotFoundException("XML File not found! Path:" + refDefPath);
             }
         }
     }

@@ -24,11 +24,12 @@ namespace NoTenKeeTest.Definition
             }
             Assert.Fail("The expected exception was not thrown.");
         }
- 
+
         [TestMethod]
         public void TestMethod_FileExists()
         {
-            ReportDefinition repDef = ReportDefineFactory.CreateDefinition(ConstTest.XML_PATH + "Excel_Report_N1.xml");
+            
+            ReportDefinition repDef = ReportDefineFactory.CreateDefinition(Path.Combine(ConstTest.XML_PATH, @"Excel_Report_N1.xml"));
             Assert.AreEqual(repDef.ReportName, "表形式帳票Ｎ１");
             Assert.AreEqual(repDef.Type, "shingle");
             Assert.AreEqual(repDef.ReferenceFormat, "A1");

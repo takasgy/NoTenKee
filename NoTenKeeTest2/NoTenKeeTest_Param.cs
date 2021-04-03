@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NoTenKee;
 
-namespace NoTenKeeTest
+namespace NoTenKeeTest2
 {
     /// <summary>
     /// 文字列のシングルコート、ダブルクォーコート指定

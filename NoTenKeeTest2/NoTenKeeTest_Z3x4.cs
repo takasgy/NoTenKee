@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NoTenKee;
 
-namespace NoTenKeeTest
+namespace NoTenKeeTest2
 {
     [TestClass]
     public class NoTenKeeTest_Z3x4
