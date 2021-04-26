@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NoTenKee.Definition
 {
     /// <summary>
-    /// 帳票項目格納用Bean定義.
+    /// 帳票項目格納用定義.
     /// </summary>
     class ReportItem
     {

@@ -67,6 +67,13 @@ namespace NoTenKee.Definition
         //　最大業に達した場合のペーシブレイク可否
         public const String ROW_PAGE_BREAK = "page_break";
 
+        // 帳票のタイプ
+        //　単票形式
+        public const String BOOK_ATTR_TYPE_SINGLE = "SINGLE";
+
+        //　一覧表形式
+        public const String BOOK_ATTR_TYPE_LIST = "LIST";
+
         // 一覧の繰り返し方向
         // 横から縦
         public const String REPORT_TYPE_Z = "Z";

@@ -6,8 +6,8 @@ namespace NoTenKeeTest2
 {
     static class ConstTest
     {
-        public const string XML_PATH = @"C:\NoTenKee\xml\";
-        public const string INPUT_PATH = @"C:\NoTenKee\input\";
-        public const string OUTPUT_PATH = @"C:\NoTenKee\output\";
+        public const string XML_PATH = @"C:\workspace\NoTenKee\xml\";
+        public const string INPUT_PATH = @"C:\workspace\NoTenKee\input\";
+        public const string OUTPUT_PATH = @"C:\workspace\NoTenKee\output\";
     }
 }

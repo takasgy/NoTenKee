@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoTenKee", "NoTenKee\NoTenK
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoTenKeeTest", "NoTenKeeTest\NoTenKeeTest.csproj", "{BE57E874-2695-4481-B415-C69E33C21E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoTenKeeTest2", "NoTenKeeTest2\NoTenKeeTest2.csproj", "{5D5C8F48-FE6D-48BF-B4D2-B3A1234F688E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoTenKeeTest2", "NoTenKeeTest2\NoTenKeeTest2.csproj", "{5D5C8F48-FE6D-48BF-B4D2-B3A1234F688E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

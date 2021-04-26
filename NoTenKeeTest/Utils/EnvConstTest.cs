@@ -9,13 +9,13 @@ namespace NoTenKeeTest.Utils
         [TestMethod]
         public void TestMethod_GetPARAM_MIN()
         {
-            Assert.AreEqual(EnvConst.PARAM_MIN, 2);
+            Assert.AreEqual(EnvConst.PARAM_MIN, 3);
         }
 
         [TestMethod]
         public void TestMethod_GetPARAM_MAX()
         {
-            Assert.AreEqual(EnvConst.PARAM_MAX, 3);
+            Assert.AreEqual(EnvConst.PARAM_MAX, 4);
         }
     }
 }

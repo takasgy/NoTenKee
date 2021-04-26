@@ -15,7 +15,7 @@ namespace NoTenKee.ReportWriter
         /// <returns></returns>
         public static BodyCounterBase Create(ReportDefinition repDef)
         {
-            if (repDef.Type == ReportConst.ROW_LIST_TYPE)
+            if (repDef.Type.ToUpper() == ReportConst.BOOK_ATTR_TYPE_LIST)
             {
                 switch (repDef.ListType.ToUpper())
                 {
@@ -24,11 +24,14 @@ namespace NoTenKee.ReportWriter
                     case ReportConst.REPORT_TYPE_Z:
                         return new ZBodyCounter(repDef);
                     default:
-                        throw new NoTenKeeException("The Report type is not specified or the correct value is not set.");
+                        throw new NoTenKeeException("The List type is not specified or the correct value is not set.");
                 }
-            } else
+            } else if (repDef.Type.ToUpper() == ReportConst.BOOK_ATTR_TYPE_SINGLE)
             {
                 return new NBodyCounter(repDef);
+            } else
+            {
+                throw new NoTenKeeException("The Report type is not specified or the correct value is not set.");
             }
         }
     }
