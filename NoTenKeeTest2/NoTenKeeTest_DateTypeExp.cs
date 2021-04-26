@@ -14,7 +14,11 @@ namespace NoTenKeeTest2
         [TestMethod]
         public void TestMethod_Date_null()
         {
-            string[] args = { ConstTest.XML_PATH + "Excel_Report_N1.xml", ConstTest.INPUT_PATH + "testData_Date_null.csv", TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "TestMethod_Date_null") };
+            string[] args = { 
+                ConstTest.XML_PATH + "NoTenkee_environment.xml", 
+                ConstTest.XML_PATH + "Excel_Report_N1.xml", 
+                ConstTest.INPUT_PATH + "testData_Date_null.csv", 
+                TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "TestMethod_Date_null") };
 
             NotenKee notenkee = new NotenKee();
             notenkee.Execute(args);
@@ -22,7 +26,11 @@ namespace NoTenKeeTest2
         [TestMethod]
         public void TestMethod_DatetypeExp01()
         {
-            string[] args = { ConstTest.XML_PATH + "Excel_Report_N1.xml", ConstTest.INPUT_PATH + "testData_DatetypeExp01.csv", TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp01") };
+            string[] args = {
+                ConstTest.XML_PATH + "NoTenkee_environment.xml",
+                ConstTest.XML_PATH + "Excel_Report_N1.xml",
+                ConstTest.INPUT_PATH + "testData_DatetypeExp01.csv",
+                TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp01") };
 
             NotenKee notenkee = new NotenKee();
             try
@@ -41,7 +49,11 @@ namespace NoTenKeeTest2
         [TestMethod]
         public void TestMethod_DatetypeExp02()
         {
-            string[] args = { ConstTest.XML_PATH + "Excel_Report_N1.xml", ConstTest.INPUT_PATH + "testData_DatetypeExp02.csv", TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp02") };
+            string[] args = {
+                ConstTest.XML_PATH + "NoTenkee_environment.xml",
+                ConstTest.XML_PATH + "Excel_Report_N1.xml",
+                ConstTest.INPUT_PATH + "testData_DatetypeExp02.csv",
+                TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp02") };
 
             NotenKee notenkee = new NotenKee();
             try
@@ -64,7 +76,11 @@ namespace NoTenKeeTest2
         [TestMethod]
         public void TestMethod_DatetypeExp03()
         {
-            string[] args = { ConstTest.XML_PATH + "Excel_Report_N1.xml", ConstTest.INPUT_PATH + "testData_DatetypeExp03.csv", TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp03") };
+            string[] args = {
+                ConstTest.XML_PATH + "NoTenkee_environment.xml",
+                ConstTest.XML_PATH + "Excel_Report_N1.xml",
+                ConstTest.INPUT_PATH + "testData_DatetypeExp03.csv",
+                TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp03") };
 
             NotenKee notenkee = new NotenKee();
             try
@@ -83,7 +99,11 @@ namespace NoTenKeeTest2
         [TestMethod]
         public void TestMethod_DatetypeExp04()
         {
-            string[] args = { ConstTest.XML_PATH + "Excel_Report_N1.xml", ConstTest.INPUT_PATH + "testData_DatetypeExp04.csv", TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp04") };
+            string[] args = {
+                ConstTest.XML_PATH + "NoTenkee_environment.xml",
+                ConstTest.XML_PATH + "Excel_Report_N1.xml",
+                ConstTest.INPUT_PATH + "testData_DatetypeExp04.csv",
+                TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "testData_DatetypeExp04") };
 
             NotenKee notenkee = new NotenKee();
             try

@@ -24,6 +24,8 @@ namespace NoTenKee.ReportWriter
         private int sheetCounter = 0;
         // 処理時のシステム日時
         private String createDate = DateTime.Now.ToString("yyyyMMddHHmmssffff");
+        // 環境情報取得クラス
+        private readonly EnvUtil envUtil = EnvUtil.Instance;
 
         // Book, Sheet用オブジェクト
         private IXLWorkbook book = null;
@@ -34,7 +36,7 @@ namespace NoTenKee.ReportWriter
 
         public ExcelReportWriter(ReportDefinition repDef)
         {
-            Initialize(repDef, EnvUtil.GetValue(EnvConst.OUTPUT_PATH));
+            Initialize(repDef, envUtil.OutputPath);
         }
 
         public ExcelReportWriter(ReportDefinition repDef, String outputPath)
@@ -49,6 +51,7 @@ namespace NoTenKee.ReportWriter
         /// <param name="outputPath">Book出力先パス</param>
         private void Initialize(ReportDefinition repDef, String outputPath)
         {
+
             this.repDef = repDef;
 
             // 一覧の改ページ制御とカウンタの生成
@@ -64,15 +67,15 @@ namespace NoTenKee.ReportWriter
         /// </summary>
         public void CreateNewReport()
         {
-            if (!File.Exists(EnvUtil.GetValue(EnvConst.TEMPLATE_PATH) + repDef.TemplateName))
+            if (!File.Exists(envUtil.TemplatePath + repDef.TemplateName))
             {
                 throw new FileNotFoundException("Template file not found!!");
             }
 
             bookName = repDef.FileName.Replace("yyyyMMddHHmmss", createDate).Replace("000", (++bookCounter).ToString());
             File.Copy(
-                EnvUtil.GetValue(EnvConst.TEMPLATE_PATH) + repDef.TemplateName,
-                EnvUtil.GetValue(EnvConst.TEMPORARY_PATH) + bookName);
+                envUtil.TemplatePath + repDef.TemplateName,
+                envUtil.TmporaryPath + bookName);
 
             this.Open();
         }
@@ -83,7 +86,7 @@ namespace NoTenKee.ReportWriter
         /// <param name="args">帳票出力レコードの内容</param>
         public void SetReportData(String[] args)
         {
-            // TODO 帳票定義のキー項目とデータでDictionalyを作成
+            // 帳票定義のキー項目とデータでDictionalyを作成
             Dictionary<String, String> recored = new Dictionary<String, String>();
             ReportItem item;
 
@@ -199,7 +202,7 @@ namespace NoTenKee.ReportWriter
         /// </summary>
         private void Open()
         {
-            book = new XLWorkbook(EnvUtil.GetValue(EnvConst.TEMPORARY_PATH) + bookName);
+            book = new XLWorkbook(envUtil.TmporaryPath + bookName);
             templateSheet = this.book.Worksheets.Worksheet(repDef.TemplateSheet);
             sheetCounter = 0;
             AddSheet();
@@ -244,7 +247,7 @@ namespace NoTenKee.ReportWriter
             book = null;
 
             File.Move(
-                EnvUtil.GetValue(EnvConst.TEMPORARY_PATH) + bookName, outputPath + bookName);
+                envUtil.TmporaryPath + bookName, outputPath + bookName);
         }
 
         /// <summary>

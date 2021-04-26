@@ -25,13 +25,13 @@ namespace NoTenKee.FileOperator
             {
                 if (!string.IsNullOrEmpty(delimiter))
                 {
-                    reader.Configuration.Delimiter = delimiter;
+                    reader.Context.Configuration.Delimiter = delimiter;
                 }
                 if (!string.IsNullOrEmpty(quote))
                 {
-                    reader.Configuration.Quote = Convert.ToChar(quote);
+                    reader.Context.Configuration.Quote = Convert.ToChar(quote);
                 }
-                reader.Configuration.HasHeaderRecord = headerFrag;
+                reader.Context.Configuration.HasHeaderRecord = headerFrag;
                 List<string> values = new List<string>();
                 while (reader.Read())
                 {

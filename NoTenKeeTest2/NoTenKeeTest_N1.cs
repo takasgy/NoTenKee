@@ -12,7 +12,11 @@ namespace NoTenKeeTest2
         [TestMethod]
         public void TestMethod_N1()
         {
-            string[] args = { ConstTest.XML_PATH + "Excel_Report_N1.xml", ConstTest.INPUT_PATH + "testData.csv", TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "TestMethod_N1") };
+            string[] args = {
+                ConstTest.XML_PATH + "NoTenkee_environment.xml",
+                ConstTest.XML_PATH + "Excel_Report_N1.xml",
+                ConstTest.INPUT_PATH + "testData.csv",
+                TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "TestMethod_N1") };
 
             NotenKee notenkee = new NotenKee();
             notenkee.Execute(args);
@@ -20,7 +24,11 @@ namespace NoTenKeeTest2
         [TestMethod]
         public void TestMethod_N1_R1()
         {
-            string[] args = { ConstTest.XML_PATH + "Excel_Report_N1_R1.xml", ConstTest.INPUT_PATH + "testData.csv", TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "TestMethod_N1_R1") };
+            string[] args = {
+                ConstTest.XML_PATH + "NoTenkee_environment.xml",
+                ConstTest.XML_PATH + "Excel_Report_N1_R1.xml",
+                ConstTest.INPUT_PATH + "testData.csv",
+                TestUtil.CreateOutputPath(ConstTest.OUTPUT_PATH, "TestMethod_N1_R1") };
 
             NotenKee notenkee = new NotenKee();
             notenkee.Execute(args);
