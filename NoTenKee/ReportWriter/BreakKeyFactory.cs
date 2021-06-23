@@ -14,7 +14,7 @@ namespace NoTenKee.ReportWriter
         /// <returns></returns>
         public static IBreakKey Create(ReportDefinition repDef)
         {
-            if (!string.IsNullOrEmpty(repDef.BreakAction))
+            if (!string.IsNullOrEmpty(repDef.BreakAction) && !repDef.BreakAction.Equals(ReportConst.BOOK_BREAK_ACTION_NO_PROCESSING))
             {
                 if (repDef.BreakAction.Equals(ReportConst.BOOK_BREAK_ACTION_NEW_SHEET) ||
                     repDef.BreakAction.Equals(ReportConst.BOOK_BREAK_ACTION_NEW_BOOK))
@@ -25,5 +25,4 @@ namespace NoTenKee.ReportWriter
             return new DumyBreakKey();
         }
     }
-
 }

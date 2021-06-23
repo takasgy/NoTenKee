@@ -34,7 +34,7 @@ namespace NoTenKee.Definition
         // キーブレイク時に新しいBookに切り替わる
         public const String BOOK_BREAK_ACTION_NEW_BOOK = "newbook";
         // キーブレイクしない
-        public const String BOOK_BREAK_ACTION_NOT_PROCESS = "not_process";
+        public const String BOOK_BREAK_ACTION_NO_PROCESSING = "no_processing";
 
         // 帳票用ヘッダ・フッダ部
         public const String REPORT_CELLS = "cells";

@@ -38,7 +38,6 @@ namespace NoTenKee.Definition
                 repDef.TemplateName = empBook.Element(ReportConst.BOOK_ATTR_TEMPLATENAME).Value;
                 repDef.FileName = empBook.Element(ReportConst.BOOK_ATTR_FILENAME).Value;
                 repDef.BreakKey = empBook.Element(ReportConst.BOOK_BREAK_KEY).Value.Split(',');
-                repDef.BreakAction = empBook.Element(ReportConst.BOOK_BREAK_ACTION).Value;
                 repDef.MaxSheet =
                     int.TryParse(empBook.Element(ReportConst.BOOK_MAX_SHEET).Value, out int sheetMax) ? sheetMax : ReportConst.BOOK_MAX_SHEET_DEF;
                 repDef.TemplateSheet = empBook.Element(ReportConst.BOOK_SHEET_TEMPLATENAME).Value;

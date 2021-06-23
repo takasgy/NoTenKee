@@ -6,6 +6,7 @@ namespace NoTenKee.ReportWriter
 {
     class DumyBreakKey : IBreakKey
     {
+        private bool initFlag = true;
         public void SetKeyValues(Dictionary<String, String> data)
         {
             // does not process
@@ -13,7 +14,12 @@ namespace NoTenKee.ReportWriter
 
         public bool Compare(Dictionary<String, String> data)
         {
-            return false;
+            if (initFlag)
+            {
+                initFlag = false;
+                return false;
+            }
+            return true;
         }
     }
 }

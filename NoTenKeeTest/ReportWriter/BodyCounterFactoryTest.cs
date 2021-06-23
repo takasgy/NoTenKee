@@ -11,7 +11,7 @@ namespace NoTenKeeTest.ReportWriter
         public void TestMethod_CreateListNType()
         {
             ReportDefinition repDef = new ReportDefinition();
-            repDef.Type = ReportConst.ROW_LIST_TYPE;
+            repDef.Type = ReportConst.BOOK_ATTR_TYPE_LIST;
             repDef.ListType = ReportConst.REPORT_TYPE_N;
             BodyCounterBase bodyCounter = BodyCounterFactory.Create(repDef);
             Assert.AreEqual(bodyCounter.GetType().ToString(), "NoTenKee.ReportWriter.NBodyCounter");
@@ -21,7 +21,7 @@ namespace NoTenKeeTest.ReportWriter
         public void TestMethod_NTypePositionValue()
         {
             ReportDefinition repDef = new ReportDefinition();
-            repDef.Type = ReportConst.ROW_LIST_TYPE;
+            repDef.Type = ReportConst.BOOK_ATTR_TYPE_LIST;
             repDef.ListType = ReportConst.REPORT_TYPE_N;
             repDef.ZIncremental = 2;
             repDef.ZRowMax = 3;
@@ -79,7 +79,7 @@ namespace NoTenKeeTest.ReportWriter
         public void TestMethod_CreateListZType()
         {
             ReportDefinition repDef = new ReportDefinition();
-            repDef.Type = ReportConst.ROW_LIST_TYPE;
+            repDef.Type = ReportConst.BOOK_ATTR_TYPE_LIST;
             repDef.ListType = ReportConst.REPORT_TYPE_Z;
             BodyCounterBase bodyCounter = BodyCounterFactory.Create(repDef);
             Assert.AreEqual(bodyCounter.GetType().ToString(), "NoTenKee.ReportWriter.ZBodyCounter");
@@ -89,7 +89,7 @@ namespace NoTenKeeTest.ReportWriter
         public void TestMethod_ZTypePositionValue()
         {
             ReportDefinition repDef = new ReportDefinition();
-            repDef.Type = ReportConst.ROW_LIST_TYPE;
+            repDef.Type = ReportConst.BOOK_ATTR_TYPE_LIST;
             repDef.ListType = ReportConst.REPORT_TYPE_Z;
             repDef.NIncremental = 2;
             repDef.NRowMax = 3;

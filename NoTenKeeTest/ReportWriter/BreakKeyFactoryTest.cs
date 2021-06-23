@@ -42,12 +42,12 @@ namespace NoTenKeeTest.ReportWriter
         }
 
         [TestMethod]
-        public void TestMethod_CreateBreakKey_Dummy()
+        public void TestMethod_CreateBreakKey_no_processing()
         {
             ReportDefinition repDef = new ReportDefinition();
             string[] breakKeys = new string[] { };
             repDef.BreakKey = breakKeys;
-            repDef.BreakAction = "Dumy";
+            repDef.BreakAction = "no_processing";
             IBreakKey breakKey = BreakKeyFactory.Create(repDef);
             Assert.AreEqual(breakKey.GetType().ToString(), "NoTenKee.ReportWriter.DumyBreakKey");
         }
